@@ -1,0 +1,641 @@
+@charset "UTF-8";
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1;
+  color: #333;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ここから */
+/* body */
+body {
+  background-color: #ddd;
+  color: #333;
+}
+/* 共通 */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+/* Header */
+/* ヘッダー */
+header {
+  background-color: #368ac8;
+  color: #fff;
+  height: 75px;
+}
+header .container {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* ヘッダーロゴ */
+header .clinic {
+  background: url(../img/logo_white.png) no-repeat left center;
+  flex-basis: 340px;
+  height: 50px;
+}
+
+header .clinic p {
+  font-size: 12px;
+  padding: 0 0 5px 57px;
+}
+header .clinic h1 {
+  padding-left: 57px;
+}
+
+/*PC版nav */
+header .pcnav ul {
+  display: flex;
+  gap: 1em;
+}
+header .pcnav li {
+  font-size: 15px;
+  font-weight: bold;
+  width: auto;
+}
+header .pcnav li a {
+  position: relative;
+}
+header .pcnav li a:hover {
+  color: #b0dbf1;
+}
+
+header .pcnav li a::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  /* /* bottom: -1px; */
+  visibility: hidden;
+}
+
+header a:hover::after {
+  visibility: visible;
+}
+
+/*SP版nav*/
+/* ハンバーガーメニュー.btn枠 */
+header .btn {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #fff;
+  background-color: #368ac8;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  border-radius: 5px;
+  z-index: 10;
+}
+/* .btn三本線 */
+header .btn span,
+header .btn ::before,
+header .btn ::after {
+  width: 35px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  transition: 0.5s;
+}
+/* ::beforeのcontent（内容）を記載、""の中身はカラ*/
+.btn span::before {
+  content: "";
+  bottom: 12px;
+}
+.btn span::after {
+  content: "";
+  top: 12px;
+}
+/* .closeの書式 */
+/* 真ん中の線消す */
+.btn.close span {
+  background-color: unset;
+}
+/* ×線をセンターに、45度回転× */
+.btn.close span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+.btn.close span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+/* ヘッダー SP版Nav */
+header .spnav {
+  display: none;
+}
+
+/* ヘッダー Tel */
+header .tel {
+  flex-basis: 256px;
+  align-items: end;
+  position: relative;
+  bottom: -5px;
+}
+header .tel :first-child {
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+header .tel .telnumber {
+  font-size: 34px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.5px;
+}
+header .tel .telnumber i {
+  font-size: 24px;
+  color: #b0dbf1;
+  padding-right: 3px;
+  vertical-align: 0.1em;
+}
+/* ヘッダーここまで */
+
+/* キービジュアル*/
+.keyvis {
+  position: relative;
+}
+.keyvis p.sinsatsu img {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+}
+/* メイン背景白色 */
+main.bg_white {
+  background-color: #fff;
+  padding: 60px 0;
+  min-height: 100vh;
+}
+/* sp版診察時間画像非表示 */
+.sp_shinsatsujikan {
+  display: none;
+}
+
+/* Main */
+/* メイン部分 見出しとキャッチ共通 */
+main section .eigomoji {
+  color: #368ac8;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+main section h2 {
+  font-size: 32px;
+  letter-spacing: 10px;
+  text-align: center;
+  font-weight: lighter;
+}
+main h2::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 3px;
+  background-color: #368ac8;
+  margin: 18px auto 30px;
+}
+/*メイン上部*/
+main .aisatsu {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+main section article {
+  flex-basis: 520px;
+}
+/*メイン本文*/
+main section article p.main_text {
+  font-size: 15px;
+  text-align: justify;
+  line-height: 2;
+  margin-bottom: 15px;
+}
+/*プロフィール */
+main section article p.profile {
+  color: #368ac8;
+  font-size: 15px;
+  text-align: left;
+  width: 6em;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
+  top: 9px;
+  letter-spacing: 0.2px;
+  margin-bottom: 4px;
+}
+main article dl {
+  font-size: 13px;
+  line-height: 1.8;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  border-bottom: 1px solid #368ac8;
+  border-top: 1px solid #368ac8;
+}
+main article dt {
+  float: left;
+}
+main article dd {
+  margin: 0 0 0 11em;
+}
+/* メイン上部イメージ画像 */
+main section .aisatsu img {
+  width: 100%;
+}
+
+/* メイン下部 */
+main section ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 820px;
+  margin: 0 auto;
+}
+main section .circle li {
+  width: calc(100% * 230 / 820);
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: justify;
+}
+main section .circle li img {
+  margin-bottom: 15px;
+  filter: drop-shadow(2px 2px 2px rgba(160, 160, 160, 0.7));
+}
+main section .circle li img:hover {
+  filter: opacity(0.8) drop-shadow(0 0 0 #368ac8);
+}
+
+/* メイン下部 moreボタン */
+main section .circle p.more {
+  border: 1px solid #368ac8;
+  color: #368ac8;
+  font-size: 15px;
+  border-radius: 15px;
+  width: 100px;
+  line-height: 30px;
+  text-align: center;
+  margin: 20px auto 0;
+  padding-left: 5px;
+}
+.more i {
+  padding-right: 5px;
+}
+/* メイン下部 more hover */
+main section p.more:hover {
+  color: #fff;
+  background-color: #368ac8;
+}
+
+/* Footer */
+footer {
+  background-color: #368ac8;
+  color: #fff;
+  font-size: 13px;
+  padding: 30px 0;
+}
+footer .container {
+  display: flex;
+  gap: 40px;
+}
+
+/* フッター左サイド section 上下アキ*/
+footer .leftside section {
+  margin: 20px 0;
+}
+footer .leftside section h3 {
+  font-size: 16px;
+  letter-spacing: 5px;
+}
+footer .leftside section p {
+  margin-top: 8px;
+}
+/* フッター左サイド 電話番号 */
+footer p.footer_tel {
+  font-size: 34px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+footer p.footer_tel i {
+  font-size: 24px;
+  color: #b0dbf1;
+  padding-right: 3px;
+  vertical-align: 0.1em;
+}
+footer .footer_tel span {
+  font-size: 13px;
+  padding-left: 1em;
+}
+
+.leftside :nth-child(4) > h3 {
+  letter-spacing: 4px;
+}
+
+/* フッター左サイド 診療時間 */
+.leftside section p.sinryojikann {
+  margin-top: -15px;
+}
+
+/* フッター右サイド地図 */
+footer .rightside {
+  flex: auto;
+}
+
+footer .rightside iframe {
+  box-sizing: border-box;
+  border: 5px solid #b0dbf1;
+  width: 100%;
+  height: 310px;
+  margin-bottom: 5px;
+}
+
+footer .rightside p {
+  line-height: 1.5;
+}
+
+/* slickの矢印 */
+.slick-next {
+  right: 10px;
+}
+.slick-prev {
+  left: 10px;
+  z-index: 1;
+}
+.slick-prev,
+.slick-next {
+  width: 30px;
+  height: 30px;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px;
+}
+/* topに戻る */
+p.pagetop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #368ac8;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+  box-shadow: 0 0 2px #5a5a5a;
+  z-index: 2;
+  /* display: none; */
+}
+:root {
+  scroll-behavior: smooth;
+}
+/* sp版電話非表示 */
+.sptel {
+  display: none;
+}
+
+/*----------------------------
+scroll_up ｜下から上へ出現
+----------------------------*/
+.scroll_up {
+  transition: 0.8s ease-in-out;
+  transform: translateY(30px);
+  opacity: 0;
+}
+.scroll_up.on {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* レスポンシブ */
+/* MediaQuery */
+@media screen and (max-width: 991px) {
+  /* ヘッダー*/
+  header .container {
+    padding: 10px 20px;
+  }
+  /*pcnav非表示 */
+  header .pcnav {
+    display: none;
+  }
+  /* ヘッダー Tel */
+  header .tel {
+    padding-right: 65px;
+  }
+  /*ハンバーガーメニュー*/
+  .container .btn {
+    display: flex;
+  }
+  /* spnav */
+  .container .spnav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  .container .spnav li {
+    color: #333;
+    font-weight: bold;
+    width: auto;
+    text-align: center;
+
+    background-color: rgba(233, 241, 245, 0.8);
+    border-bottom: 1px solid #368ac8;
+  }
+  .container .spnav li a {
+    display: block;
+    padding: 20px;
+  }
+  .container .spnav li a:hover {
+    background-color: rgba(54, 138, 200, 0.4);
+  }
+
+  /* キービジュアル*/
+  .keyvis p.sinsatsu {
+    width: 80%;
+  }
+  /* slickの矢印 */
+  .slick-prev,
+  .slick-next {
+    width: 20px;
+    height: 20px;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 20px;
+  }
+
+  /* メイン背景白色 */
+  main.bg_white {
+    padding: 40px 30px;
+  }
+  main section .aisatsu {
+    gap: 30px;
+  }
+  main section article {
+    max-width: auto;
+  }
+  /*メイン本文*/
+  main section article p.main_text {
+    line-height: 1.5;
+    margin-bottom: 5px;
+  }
+  main article dl {
+    line-height: 1.5;
+  }
+  /* メイン下部 */
+  main section .circle ul {
+    width: calc(100% / 3);
+  }
+
+  /* Footer */
+  footer {
+    padding: 30px;
+  }
+
+  フッター右サイド地図 footer .rightside iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* スマホ版レスポンシブ */
+/* MediaQuery */
+@media screen and (max-width: 767px) {
+  /* ヘッダー*/
+  header .container {
+    padding: 10px 10px;
+  }
+  header .btn {
+    right: 10px;
+  }
+
+  /* ヘッダー Tel */
+  header .tel {
+    display: none;
+  }
+
+  /* キービジュアル*/
+  .keyvis p.sinsatsu {
+    display: none;
+  }
+  /* メイン背景白色 */
+  main.bg_white {
+    padding: 20px 20px 40px;
+  }
+  /* キービジュアル */
+  .keyvis p.sinsatsu img {
+    margin-bottom: 0;
+  }
+  /* sp版診察時間 */
+  .sp_shinsatsujikan {
+    text-align: center;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .sp_shinsatsujikan p {
+    padding-top: 5px;
+    font-size: 12px;
+    text-align: right;
+    margin-bottom: 40px;
+  }
+
+  /*メイン上部*/
+  main .aisatsu {
+    display: block;
+    margin-bottom: 40px;
+  }
+  main section article {
+    width: auto;
+  }
+  /* メインセクションのイメージ写真消す */
+  main section .aisatsu a {
+    display: none;
+  }
+  /*メイン下部*/
+  main section ul {
+    display: block;
+  }
+  main section .circle li {
+    width: 100%;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  main section .circle li p {
+    text-align: justify;
+  }
+
+  /* メイン下部 moreボタン */
+  main section .circle p.more {
+    margin-top: 15px;
+  }
+  main section ul li:last-child {
+    margin-bottom: 0px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px;
+  }
+  footer .container {
+    display: block;
+  }
+  footer .container .pctel {
+    display: none;
+  }
+  /* フッター右サイド地図 */
+  footer .rightside iframe {
+    width: 100%;
+  }
+
+  /* sp版電話番号常に表示 */
+  .sptel {
+    display: block;
+    padding: 8px;
+    background: linear-gradient(#c98300, #f3b33d);
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+  }
+  .sptel section p:first-child {
+    margin-bottom: 4px;
+    font-size: 13px;
+  }
+  .sptel p.footer_tel {
+    font-size: 38px;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 1px;
+  }
+  .sptel p i {
+    padding-right: 5px;
+    font-size: 30px;
+  }
+}

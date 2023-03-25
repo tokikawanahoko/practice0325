@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="discription" name="土曜日、日曜日も診察可能な歯科医院。千代田区で歯科医院をお探しでしたらお電話でお問合せください。">
+    <title>あおいろ歯科医院</title>
+    <!-- ファビコン -->
+    <link rel="icon" href="img/icon.ico" type="img/png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <!-- FONT-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!-- GoogleMap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- GoogleFonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- lightbox -->
+    <link rel="stylesheet" href="js/lightbox/css/lightbox.min.css">
+    <!-- slick -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- footerFixed -->
+    <script src="js/footerFixed.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body id="top">
+
+    <!-- headerここから -->
+    <header>
+        <div class="container">
+            <div class="clinic">
+                <p>土・日曜も診察しています。急患随時受付</p>
+                <h1><img src="img/aoiroshika.webp" alt="あおいろ歯科医院ロゴ"></h1>
+            </div>
+
+            <!-- Nav PC版 -->
+            <nav class="pcnav">
+                <ul>
+                    <li><a href="index.html#home">ホーム</a></li>
+                    <li><a href="index.html#about">当院の特徴</a></li>
+                    <li><a href="index.html#access">アクセス</a></li>
+                    <li><a href="#">お問い合せ</a></li>
+                </ul>
+            </nav>
+            <!-- Nav SP版-->
+            <nav class="spnav">
+                <ul>
+                    <li><a href="index.html#home">ホーム</a></li>
+                    <li><a href="index.html#about">当院の特徴</a></li>
+                    <li><a href="index.html#access">アクセス</a></li>
+                    <li><a href="#">お問い合せ</a></li>
+                </ul>
+            </nav>
+            <!-- Nav SP版 ハンバーガーボタン -->
+            <button class="btn"><span></span></button>
+
+            <div class="tel">
+                <p>＼ご予約はこちらから／</p>
+                <p class="telnumber"><i class="fa-solid fa-phone"></i>03-1234-5678
+                </p>
+            </div>
+        </div>
+    </header>
+    <!-- headerここまで -->
+
+
+    <!-- main/contactページ -->
+    <main class="container bg_white">
+
+        <article>
+            <h1>お問い合せ</h1>
+            <!-- フォームここから -->
+            <form action="https://ssl.form-mailer.jp/fm/service/Forms/complete" method="post" name="form1" enctype="multipart/form-data" accept-charset="UTF-8">
+                <input type="hidden" name="key" value="b22ab9e5778750">
+
+                <fieldset>
+                    <legend>お名前：</legend>
+                    <input id="name" type="text" name="field_6763756" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>メールアドレス：</legend>
+                    <input id="email" type="email" name="field_6763751" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>区分：</legend>
+                    <label for="first">
+                        <input type="radio" name="field_6763752" value="0">
+                        初診の方</label>
+                    <label for="second">
+                        <input type="radio" name="field_6763752" value="1">
+                        再診の方</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>お問い合せの種類：</legend>
+                    <select name="field_6763757">
+                        <option value="">------</option>
+                        <option value="0">定期検診について</option>
+                        <option value="1">訪問診療について</option>
+                        <option value="2">保険適用外治療について</option>
+                        <option value="3">その他</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>内容：</legend>
+                    <textarea id="para" name="field_6763769" placeholder="※ご自由にお書きください"></textarea>
+                </fieldset>
+
+                <button>送信する</button>
+
+                <input type="hidden" name="code" value="utf8">
+            </form>
+        </article>
+    </main>
+
+    <!-- footerここから -->
+    <footer id="footer">
+        <p>&copy;2023あおいろ歯科医院</p>
+        <!-- ページトップに戻る -->
+        <p class="pagetop">
+            <a href="#top">
+                <i class="fa-solid fa-caret-up"></i>
+            </a>
+        </p>
+    </footer>
+    <!-- フッターここまで -->
+
+    <!-- Javascript -->
+    <script src="js/lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
