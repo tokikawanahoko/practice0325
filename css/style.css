@@ -178,11 +178,11 @@ header .tel .telnumber i {
 .keyvis {
   position: relative;
 }
-.keyvis p.sinsatsu img {
+/* .keyvis p.sinsatsu img {
   position: absolute;
   right: 0;
   bottom: 20px;
-}
+} */
 /* メイン背景白色 */
 main.bg_white {
   background-color: #fff;
